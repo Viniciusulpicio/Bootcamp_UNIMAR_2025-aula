@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.header{
+    background-color: #001C43;
+    display: flex;
+    justify-content: space-between;
+    height: 7.4vh;
+    align-items: center;
+}
+
+.logo_unimar{
+    height: 3.5vh;
+    margin-left: 1.7vw;
+}
+
+.topicos{
+    margin-right: 2vw;
+    display: flex; 
+    gap: 1vw;  
+}
+
+.itens_topicos{
+    color: white;
+    text-decoration: none
+}
+
+.banner{
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    max-height: 55.8vh;
+    margin: 0 auto;
+    background-color: #001C43;
+
+}
+
+.azul{
+    background-color: #001C43;
+
+}
+.cursos_tecnologia{
+    background-color: #001C43;
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+
+.titulo_curso{
+    margin: 4vh;
+    font-size: 32px;
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.2vw;
+}
+
+.card{
+    background-color: #ffffff;
+    width: 14.5vw;
+    border-radius: 10px;
+    padding: 1.2vw;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    color: black;
+}
+
+.card img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
