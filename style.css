@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
 }
 
 .header{
@@ -37,12 +38,10 @@
     max-height: 55.8vh;
     margin: 0 auto;
     background-color: #001C43;
-
 }
 
 .azul{
     background-color: #001C43;
-
 }
 .cursos_tecnologia{
     background-color: #001C43;
@@ -108,6 +107,8 @@
     font-size: 22px;
     color: #001C43;
     padding-top: 0.8vh;
+    width: 100%;
+    max-width: 300px;
 }
 
 .noticias{
@@ -128,12 +129,21 @@
     gap: 1.5vw;
 }
 
-.cards-noticias img{
+.noticia{
     width: 20.833vw;
     height: 20vh;
     border-radius: 8px;
-    object-fit: cover;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
 
+.noticia img{
+    width: 20.833vw;
+    height: 20vh;
+    object-fit: cover;
 }
 
 .titulo-noticias{
@@ -158,6 +168,8 @@
     gap: 1.5vw;
     width: 23vw;
     margin-top: 3vh;
+    width: 90%;
+    max-width: 400px;
 }
 
 .contato h2{
@@ -196,3 +208,96 @@
 
 /* animacoes */
 
+.card:hover {
+  transform: translateY(-10px); 
+}
+
+.btn:hover{
+    background-color: #00558f;
+    transition: 0.5s;
+}
+
+.overlay {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    text-align: left;
+    transition: bottom 0.3s ease;
+}
+
+.noticia:hover .overlay {
+    bottom: 0%;
+
+}
+
+.overlay a {
+    background-color: #001C43;
+    color: white;
+    padding: 6px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.overlay a:hover {
+    background-color: #003366;
+}
+
+.overlay p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.input:focus{
+    border-color: #0a74da;
+    box-shadow: 0 0 8px rgba(10, 116, 218, 0.7);
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1024px) {
+  .cards, .cards-noticias {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .card, .noticia {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .topicos {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+  }
+
+  .cards, .cards-noticias {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card, .noticia {
+    width: 90%;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .noticia img{
+    width: 100%;
+  }
+}
